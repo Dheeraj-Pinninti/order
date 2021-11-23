@@ -18,6 +18,11 @@ public class OrderServiceApplication {
 
     @Autowired
     private OrderDao orderDao;
+    
+    @GetMapping("/display")
+    public String display(){
+        return "WELCOME";
+    }
 
     @GetMapping
     public List<Order> fetchOrders() {
